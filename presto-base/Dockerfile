@@ -3,7 +3,7 @@
 #
 
 FROM openjdk:8-slim
-LABEL maintainer="lewuathe"
+LABEL maintainer="HariprasadAllaka1612"
 
 ARG VERSION
 ENV PRESTO_VERSION=${VERSION}
@@ -33,6 +33,7 @@ RUN tar xvzf presto-server-${PRESTO_VERSION}.tar.gz -C /usr/local/
 RUN ln -s /usr/local/presto-server-${PRESTO_VERSION} $PRESTO_HOME
 
 ADD scripts ${PRESTO_HOME}/scripts
+ADD lib/hudi-presto-bundle-0.6.0-SNAPSHOT.jar ${PRESTO_HOME}/plugin/hive-hadoop2/
 
 # Create data dir
 RUN mkdir -p $PRESTO_HOME/data

@@ -2,19 +2,19 @@ version: '3'
 
 services:
   coordinator:
-    image: "lewuathe/presto-coordinator:${PRESTO_VERSION}"
+    image: "lewuathe/presto-coordinator:318"
     ports:
       - "8080:8080"
     container_name: "coordinator"
     command: coordinator
   worker0:
-    image: "lewuathe/presto-worker:${PRESTO_VERSION}"
+    image: "lewuathe/presto-worker:318"
     container_name: "worker0"
     ports:
       - "8081:8081"
     command: worker0
   worker1:
-    image: "lewuathe/presto-worker:${PRESTO_VERSION}"
+    image: "lewuathe/presto-worker:318"
     container_name: "worker1"
     ports:
       - "8082:8081"

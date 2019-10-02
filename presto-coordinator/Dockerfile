@@ -1,7 +1,7 @@
 ARG VERSION
 
-FROM lewuathe/presto-base:${VERSION}
-MAINTAINER lewuathe
+FROM HariprasadAllaka1612/presto-base:${VERSION}
+MAINTAINER HariprasadAllaka1612
 
 ADD etc /usr/local/presto/etc
 
